@@ -9,3 +9,5 @@ This was accomplished through programming a PIC microcontroller using the PIC18 
 
 bit7Tone.asm - connected bit 7 to a resistor and speaker, then produced tone.
 
+blinkingLED.asm - bit 7 connected to LED, continuously blinking.
+

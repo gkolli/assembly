@@ -11,3 +11,7 @@ bit7Tone.asm - connected bit 7 to a resistor and speaker, then produced tone.
 
 blinkingLED.asm - bit 7 connected to LED, continuously blinking.
 
+countUp.asm - LEDs light up with the corresponding value, counting up from 0 to 255, continuously rolling over.
+
+
+

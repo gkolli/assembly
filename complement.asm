@@ -1,0 +1,12 @@
+    #include p18f45k20.inc 
+    CONFIG FOSC = INTIO67
+    ORG 0
+    MOVLW 0XFF
+    MOVWF TRISC,0
+    MOVLW 00h
+    MOVWF TRISD,0
+LOOP MOVF PORTC,0 
+    MOVWF PORTD,0 
+    COMF PORTD,0
+    BRA LOOP
+    END

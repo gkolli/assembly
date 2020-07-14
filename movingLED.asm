@@ -1,0 +1,25 @@
+    //Lab 3, assignment 4
+    #include p18f45k20.inc 
+    CONFIG FOSC = INTIO67
+TIMER1 EQU 0x04
+TIMER2 EQU 0x05
+    ORG 0
+    
+    CLRF TRISD 
+    MOVLW B'10000000'
+    MOVWF PORTD
+LOOP RRNCF PORTD
+    CALL DELAY
+    BRA LOOP
+
+DELAY MOVLW D'255'
+    MOVWF TIMER1
+    MOVLW D'255'
+    MOVWF TIMER2
+    DECF TIMER2
+    BNZ $-02h
+    DECF TIMER1
+    BNZ $-0x0A
+    RETURN
+      
+    END

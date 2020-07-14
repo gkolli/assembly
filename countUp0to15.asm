@@ -1,0 +1,30 @@
+#include p18f45k20.inc
+CONFIG FOSC=INTIO67
+ 
+    
+TIMER EQU 0x04
+TIMER2 EQU 0x05
+ORG 0
+ 
+CLRF TRISD
+CLRF PORTD
+ 
+LOOP INCF WREG
+    ANDLW d'15'
+    MOVF PORTD
+    ;CALL DELAY
+    
+    BRA LOOP
+    
+DELAY MOVLW D'255'
+   MOVWF TIMER
+   MOVLW D'255'
+   MOVWF TIMER2
+   DECF TIMER2
+   BNZ $ - 02h
+   DECF TIMER
+   BNZ $ - 0x0A
+   RETURN
+      
+    END
+    

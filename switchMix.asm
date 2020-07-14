@@ -1,0 +1,15 @@
+    #include p18f45k20.inc
+    CONFIG FOSC=INTIO67
+    ORG 0
+    
+    SETF TRISC
+    CLRF TRISD
+    
+LOOP MOVF PORTC,0
+    RLNCF WREG
+    RLNCF WREG
+    RLNCF WREG
+    RLNCF WREG
+    MOVWF PORTD
+    BRA LOOP
+   END

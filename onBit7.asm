@@ -1,0 +1,8 @@
+    CONFIG FOSC = INTIO67
+    ORG 0
+    MOVLW 00h
+    MOVWF 95h,0
+    MOVLW b'10000000'
+    MOVWF 83h,0
+LOOP	BRA LOOP
+    END

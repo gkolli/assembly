@@ -13,5 +13,7 @@ blinkingLED.asm - bit 7 connected to LED, continuously blinking.
 
 countUp.asm - LEDs light up with the corresponding value, counting up from 0 to 255, continuously rolling over.
 
+countUp0to15 - same as countUp.asm, however the LEDs count only from 0 to 15, then roll over continusously.
+
 
 
